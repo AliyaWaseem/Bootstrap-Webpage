@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .navbar-brand{
+    width: 100px;
+    height: 80px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 50%;
+    border-right-color: transparent;
+    position: relative;
+}
+.navbar-brand::before{
+    content: "BMP";
+    color: rgb(18, 18, 189);
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+     font-family: "DM Serif Display", serif ;
+} 
+
+.nav-link, .dropdown-item{
+    font-family: urbanist, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    border-bottom: 3px solid transparent;
+    transition: 3s ease;
+}
+.nav-link:hover, .dropdown-item:hover{
+       border-bottom: 3px solid black;
+       color: blue;
+}
+.active{
+    border-bottom: 3px solid blue;
+    transition: 3s ease;
+}
+.btn{
+    cursor: pointer;
+}
+
+.navbar-toggler {
+    border: none!important;
+}
+
+.navbar-toggler:focus {
+    outline: none!important;
+    box-shadow: none!important;
+    border: none!important;
+}
+
+.video-container{
+    position: relative;
+    height: 100vh;
+}
+.video{
+    position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.video video{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+.overlay{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+}
+.display-1{
+    font-family: "DM Serif Display", serif;
+    margin-top: 7.5rem;
+    text-shadow: 2px 2px 6px #000000;
+}
+.display-4{
+    font-family: "Playfair Display", serif;
+    color: rgb(18, 18, 189);
+    font-weight: 700;
+    text-shadow: 2px 2px 6px #000000;
+}
+.head-text{
+    font-family: "Urbanist", serif;
+    text-align: justify;
+    font-weight: 300;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: #fff;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+@media only screen and (max-width: 450px) {
+    button.btn{
+        display: none;
+    }
+   
+}
+@media only screen and (max-width: 775px) {
+        
+    h4{
+            display: none;
+         }
+        
+}
+/* introduction section */
+.top-space{
+    margin-top: 70px !important;
+}
+.display-2, .display-3{
+    font-family: "DM Serif Display", serif;
+}
+.display-2{
+    color: rgb(18, 18, 189);
+}
+.lead{
+    font-family: "Urbanist", serif;
+    font-weight: 300;
+    color: #000000;  
+    line-height: 1.5em;
+}
+
+/* businesses section */
+
+.title{
+    position: relative;
+    color: #636466;
+}
+h1{
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.title::before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: rgb(18, 18, 189);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+}
+span{
+    background-color: #fff;
+}
+i{
+    font-size: 30px;
+    color: rgb(18, 18, 189);
+}
+
+.businessRow{
+    margin-top: 30px;
+    margin-right: -7px;
+    margin-left: -7px;
+}
+.businessItem{
+    padding: 7px 7px;
+}
+.businessItem .bBox {
+    position: relative;
+    overflow: hidden;
+}
+
+.businessItem .bBox img {
+    width: 100%;
+    height: 230px;
+}
+
+.businessItem .bBox .bHover {
+    position: absolute;
+    bottom: calc(-100% - 20px);
+    background-color: rgba(75, 0, 7, 0.4);
+    color: #fff;
+    padding: 10px 14px;
+    font-size: 22px;
+    height: 100%;
+    border-top: 1px solid rgba(244, 28, 47, 0.5);
+    -webkit-transition: bottom .2s linear;
+    -o-transition: bottom .2s linear;
+    transition: .2s linear ease-in-out;
+}
+
+.businessItem .bBox:hover .bHover {
+    bottom: -50%;
+}
+.businessSec{
+    margin-bottom: 30px;
+}
+/* our values Section */
+.ourCoreValues {
+    background: url(asset/values/ourCoreValue_CSR_bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 55px 0 30px;
+    border-top: 4px solid rgb(18, 18, 189);
+    border-bottom: 4px solid rgb(18, 18, 189);
+    overflow: hidden;
+}
+.flip-container {
+    margin-bottom: 20px;
+}
+
+/* footer */
+
+  
+  
